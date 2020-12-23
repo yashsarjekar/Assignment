@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% if course %}
+    <div class="container" style="margin-top: 100px">
+        <h1>{{ course.title }}</h1>
+        <iframe height="400px" width="100%" src="{{ course.url }}"></iframe>
+        <p>{{ course.description }}</p>
+    </div>
+{% else %}
+    <h1>You have Not Enrolled In any Course Please Enroll It fast.</h1>
+{% endif %}
+{% endblock %}

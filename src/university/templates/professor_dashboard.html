@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container" style="margin-top: 100px">
+    <!--All Courses by Professor-->
+    
+    <div class="course col-lg-8 mx-auto">
+            <h1>All this Courses are taught by you</h1>
+        <div class="row">
+                {% for course in courses %}
+                <div class="col-lg-4 col-md-4 col-sm-10 col-12 mx-auto" >
+                    <div class="card mx-auto mb-3" id="{{ course.id }}" style="width: 18rem;">
+                            <img src="{{ course.images.url }}" class="card-img-top" alt="..." />
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ course.title }}</h5>
+                                    <div class="card-footer row nu-gutter ">
+                                        <input type="submit" class="btn btn-light form-control" value="JOIN COURSE">
+                                    </div>
+                                </div>
+                    </div>
+                </div>
+                {% endfor%}
+        </div>
+        
+        
+                    
+            </div>  
+        </div>
+    
+    </div>
+</div>     
+</div>
+
+
+{% endblock %}
